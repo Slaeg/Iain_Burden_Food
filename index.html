@@ -4,59 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iain Burden Food</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Iain Burden Food</h1>
     </header>
 
-    <section id="gallery">
+    <div id="gallery" class="section">
         <div class="carousel">
-            <!-- Slide Items -->
             <div class="carousel-item active">
-                <img src="images/dish1.jpg" alt="Pheasant and Bacon Casserole">
+                <div class="image-container">
+                    <img data-src="images/dish1.jpg" alt="Pheasant and Bacon Casserole" class="lazy-image">
+                    <div class="loading-spinner"></div>
+                </div>
                 <div class="caption">Pheasant and Bacon Casserole</div>
             </div>
             <div class="carousel-item">
-                <img src="images/dish2.jpg" alt="Pan-Fried Hake with Mash Potatoes, Roast Asparagus, and Wild Garlic Pesto">
+                <div class="image-container">
+                    <img data-src="images/dish2.jpg" alt="Pan-Fried Hake with Mash Potatoes, Roast Asparagus, and Wild Garlic Pesto" class="lazy-image">
+                    <div class="loading-spinner"></div>
+                </div>
                 <div class="caption">Pan-Fried Hake with Mash Potatoes, Roast Asparagus, and Wild Garlic Pesto</div>
             </div>
             <div class="carousel-item">
-                <img src="images/dish3.jpg" alt="Slow Roasted Beef">
+                <div class="image-container">
+                    <img data-src="images/dish3.jpg" alt="Slow Roasted Beef" class="lazy-image">
+                    <div class="loading-spinner"></div>
+                </div>
                 <div class="caption">Slow Roasted Beef</div>
             </div>
             <div class="carousel-item">
-                <img src="images/dish4.jpg" alt="Lemon Possets">
+                <div class="image-container">
+                    <img data-src="images/dish4.jpg" alt="Lemon Possets" class="lazy-image">
+                    <div class="loading-spinner"></div>
+                </div>
                 <div class="caption">Lemon Possets</div>
             </div>
             <div class="carousel-item">
-                <img src="images/dish5.jpg" alt="Baked Camembert with Garlic and Rosemary Tips">
+                <div class="image-container">
+                    <img data-src="images/dish5.jpg" alt="Baked Camembert with Garlic and Rosemary Tips" class="lazy-image">
+                    <div class="loading-spinner"></div>
+                </div>
                 <div class="caption">Baked Camembert with Garlic and Rosemary Tips</div>
             </div>
             <div class="carousel-item">
-                <img src="images/dish6.jpg" alt="Chocolate Sponge">
+                <div class="image-container">
+                    <img data-src="images/dish6.jpg" alt="Chocolate Sponge" class="lazy-image">
+                    <div class="loading-spinner"></div>
+                </div>
                 <div class="caption">Chocolate Sponge</div>
             </div>
             <div class="carousel-item">
-                <img src="images/dish7.jpg" alt="Globe Artichoke with a Lemon Butter Sauce">
+                <div class="image-container">
+                    <img data-src="images/dish7.jpg" alt="Globe Artichoke with a Lemon Butter Sauce" class="lazy-image">
+                    <div class="loading-spinner"></div>
+                </div>
                 <div class="caption">Globe Artichoke with a Lemon Butter Sauce</div>
             </div>
             <div class="carousel-item">
-                <img src="images/dish8.jpg" alt="Sirloin Steak">
+                <div class="image-container">
+                    <img data-src="images/dish8.jpg" alt="Sirloin Steak" class="lazy-image">
+                    <div class="loading-spinner"></div>
+                </div>
                 <div class="caption">Sirloin Steak</div>
             </div>
             <div class="carousel-item">
-                <img src="images/dish9.jpg" alt="Raspberry Tart with a Pistachio Crust">
+                <div class="image-container">
+                    <img data-src="images/dish9.jpg" alt="Raspberry Tart with a Pistachio Crust" class="lazy-image">
+                    <div class="loading-spinner"></div>
+                </div>
                 <div class="caption">Raspberry Tart with a Pistachio Crust</div>
             </div>
 
-            <!-- Navigation Arrows -->
             <button class="prev" onclick="moveCarousel(-1)">❮</button>
             <button class="next" onclick="moveCarousel(1)">❯</button>
 
-            <!-- Indicators -->
             <div class="carousel-indicators">
                 <span class="indicator active" onclick="setCurrentSlide(0)"></span>
                 <span class="indicator" onclick="setCurrentSlide(1)"></span>
@@ -69,10 +93,11 @@
                 <span class="indicator" onclick="setCurrentSlide(8)"></span>
             </div>
         </div>
-    </section>
+    </div>
 
     <footer>
         <p>© 2024 Iain Burden. All rights reserved.</p>
+        <p>Contact: <a href="mailto:iain@example.com">iain@example.com</a></p>
     </footer>
 
     <script src="script.js"></script>
