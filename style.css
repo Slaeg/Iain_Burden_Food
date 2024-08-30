@@ -1,238 +1,238 @@
-/* Base styles */
+/* Base styles - These styles apply to the overall layout and appearance of the page */
 body {
-    font-family: 'Lato', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f5f0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: 'Lato', Arial, sans-serif; /* Sets the font for the entire page */
+    margin: 0; /* Removes the default margin around the body */
+    padding: 0; /* Removes the default padding around the body */
+    background-color: #f9f5f0; /* Sets a light background color for the page */
+    display: flex; /* Uses flexbox layout for the body */
+    flex-direction: column; /* Aligns flex items (header, gallery, footer) vertically */
+    min-height: 100vh; /* Ensures the body takes up at least the full height of the viewport */
 }
 
-/* Header styles */
+/* Header styles - This section styles the header of the page */
 header {
-    background-color: #5c3d2e;
-    color: #f9f5f0;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #5c3d2e; /* Sets a dark brown background color for the header */
+    color: #f9f5f0; /* Sets the text color in the header to a light color */
+    padding: 20px 0; /* Adds vertical padding inside the header */
+    text-align: center; /* Centers the text horizontally */
 }
 
 header h1 {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5em;
-    letter-spacing: 1px;
+    margin: 0; /* Removes default margin around the heading */
+    font-family: 'Playfair Display', serif; /* Applies a different font to the heading */
+    font-size: 2.5em; /* Sets a large font size for the heading */
+    letter-spacing: 1px; /* Adds spacing between letters */
 }
 
-/* Main content area */
+/* Main content area - This section styles the gallery section where the carousel is displayed */
 #gallery {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    padding: 40px 20px;
+    flex-grow: 1; /* Allows the gallery to take up remaining space in the flex container */
+    display: flex; /* Uses flexbox layout for aligning items */
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    background-color: #fff; /* Sets a white background for the gallery section */
+    padding: 40px 20px; /* Adds padding around the gallery section */
 }
 
-/* Carousel styles */
+/* Carousel styles - This section defines the appearance and layout of the carousel */
 .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    position: relative; /* Allows positioning of child elements relative to the carousel */
+    width: 100%; /* Makes the carousel take up the full width of its container */
+    max-width: 800px; /* Limits the maximum width of the carousel */
+    margin: 0 auto; /* Centers the carousel horizontally */
+    overflow: hidden; /* Hides any content that overflows the carousel */
+    border-radius: 15px; /* Rounds the corners of the carousel */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Adds a shadow around the carousel */
 }
 
 .carousel-item {
-    position: relative;
-    display: none;
-    width: 100%;
+    position: relative; /* Positions child elements relative to the carousel item */
+    display: none; /* Hides carousel items by default */
+    width: 100%; /* Makes the carousel item take up the full width of the carousel */
 }
 
 .carousel-item.active {
-    display: block;
+    display: block; /* Displays the active carousel item */
 }
 
 .image-container {
-    width: 100%;
-    padding-top: 75%; /* 4:3 Aspect Ratio */
-    position: relative;
-    margin-bottom: 10px; /* Add space for the caption */
+    width: 100%; /* Makes the image container take up the full width of the carousel item */
+    padding-top: 75%; /* Maintains a 4:3 aspect ratio for the image container */
+    position: relative; /* Allows for positioning of child elements like images and captions */
+    margin-bottom: 10px; /* Adds space below the image container for the caption */
 }
 
 .lazy-image {
-    position: absolute;
+    position: absolute; /* Positions the image absolutely within the container */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    width: 100%; /* Makes the image take up the full width of the container */
+    height: 100%; /* Makes the image take up the full height of the container */
+    object-fit: cover; /* Ensures the image covers the container, maintaining aspect ratio */
+    opacity: 0; /* Hides the image initially */
+    transition: opacity 0.3s ease-in-out; /* Smoothly transitions the image's opacity */
 }
 
 .lazy-image.loaded {
-    opacity: 1;
+    opacity: 1; /* Displays the image when it has finished loading */
 }
 
 .caption {
-    background-color: rgba(92, 61, 46, 0.8);
-    color: #f9f5f0;
-    padding: 15px;
-    font-size: 1.2em;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
+    background-color: rgba(92, 61, 46, 0.8); /* Sets a semi-transparent background color for the caption */
+    color: #f9f5f0; /* Sets the text color of the caption to a light color */
+    padding: 15px; /* Adds padding inside the caption */
+    font-size: 1.2em; /* Sets a slightly larger font size for the caption text */
+    text-align: center; /* Centers the caption text */
+    position: absolute; /* Positions the caption absolutely within the image container */
+    bottom: 0; /* Aligns the caption to the bottom of the image container */
     left: 0;
     right: 0;
-    z-index: 3; /* Ensure it's above the image */
+    z-index: 3; /* Ensures the caption is layered above the image */
 }
 
-/* Carousel navigation */
+/* Carousel navigation - Styles for the previous and next buttons */
 .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(92, 61, 46, 0.7);
-    color: #f9f5f0;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-size: 1.5em;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
+    position: absolute; /* Positions the buttons absolutely within the carousel */
+    top: 50%; /* Aligns the buttons vertically to the center */
+    transform: translateY(-50%); /* Centers the buttons exactly at the middle */
+    background-color: rgba(92, 61, 46, 0.7); /* Sets a semi-transparent background color */
+    color: #f9f5f0; /* Sets the button text color to a light color */
+    border: none; /* Removes the default border */
+    padding: 15px; /* Adds padding inside the buttons */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the buttons */
+    border-radius: 50%; /* Makes the buttons circular */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adds smooth transitions on hover */
+    font-size: 1.5em; /* Increases the font size for better visibility */
+    width: 50px; /* Sets a fixed width for the buttons */
+    height: 50px; /* Sets a fixed height for the buttons */
+    display: flex; /* Uses flexbox to center the icon inside the button */
+    align-items: center; /* Centers the icon vertically */
+    justify-content: center; /* Centers the icon horizontally */
+    z-index: 2; /* Ensures the buttons are layered above other elements */
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(92, 61, 46, 0.9);
-    transform: translateY(-50%) scale(1.1);
+    background-color: rgba(92, 61, 46, 0.9); /* Darkens the background color on hover */
+    transform: translateY(-50%) scale(1.1); /* Slightly increases the size of the button on hover */
 }
 
 .prev {
-    left: 20px;
+    left: 20px; /* Positions the previous button on the left side */
 }
 
 .next {
-    right: 20px;
+    right: 20px; /* Positions the next button on the right side */
 }
 
-/* Carousel indicators */
+/* Carousel indicators - Styles for the small dots that indicate the current slide */
 .carousel-indicators {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #f9f5f0; /* Light background color */
-    position: relative; /* Changed from absolute to relative */
-    z-index: 2;
+    text-align: center; /* Centers the indicators horizontally */
+    padding: 10px 0; /* Adds padding around the indicators */
+    background-color: #f9f5f0; /* Sets a light background color for the indicator area */
+    position: relative; /* Positions the indicator area relative to its container */
+    z-index: 2; /* Ensures the indicators are layered above the carousel content */
 }
 
 .indicator {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background-color: #5c3d2e;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Makes the indicators inline-block elements */
+    width: 10px; /* Sets a fixed width for each indicator */
+    height: 10px; /* Sets a fixed height for each indicator */
+    margin: 0 5px; /* Adds horizontal spacing between indicators */
+    background-color: #5c3d2e; /* Sets a dark brown background color for inactive indicators */
+    border-radius: 50%; /* Makes the indicators circular */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the indicators */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adds smooth transitions on hover */
 }
 
 .indicator.active {
-    background-color: #b85c38;
-    transform: scale(1.2);
+    background-color: #b85c38; /* Changes the background color of the active indicator */
+    transform: scale(1.2); /* Enlarges the active indicator */
 }
 
-/* Loading spinner */
+/* Loading spinner - Styles for the spinner displayed while images are loading */
 .loading-spinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    border: 3px solid #f3f3f3;
-    border-top: 3px solid #5c3d2e;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+    position: absolute; /* Positions the spinner absolutely within the image container */
+    top: 50%; /* Centers the spinner vertically */
+    left: 50%; /* Centers the spinner horizontally */
+    width: 50px; /* Sets a fixed width for the spinner */
+    height: 50px; /* Sets a fixed height for the spinner */
+    border: 3px solid #f3f3f3; /* Sets a light border color for the spinner */
+    border-top: 3px solid #5c3d2e; /* Sets a dark border color for the top of the spinner */
+    border-radius: 50%; /* Makes the spinner circular */
+    animation: spin 1s linear infinite; /* Adds a spinning animation */
 }
 
 @keyframes spin {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
+    0% { transform: translate(-50%, -50%) rotate(0deg); } /* Starts the spinner rotation */
+    100% { transform: translate(-50%, -50%) rotate(360deg); } /* Completes the spinner rotation */
 }
 
-/* Footer styles */
+/* Footer styles - This section styles the footer of the page */
 footer {
-    background-color: #5c3d2e;
-    color: #f9f5f0;
-    padding: 15px 0;
-    text-align: center;
-    margin-top: 20px;
+    background-color: #5c3d2e; /* Sets a dark brown background color for the footer */
+    color: #f9f5f0; /* Sets the text color in the footer to a light color */
+    padding: 15px 0; /* Adds vertical padding inside the footer */
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 20px; /* Adds space above the footer */
 }
 
-/* Responsive design */
+/* Responsive design - Media queries for different screen sizes */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em;
+        font-size: 2em; /* Reduces the font size for smaller screens */
     }
 
     #gallery {
-        padding: 20px 10px;
+        padding: 20px 10px; /* Reduces padding for smaller screens */
     }
 
     .carousel {
-        border-radius: 10px;
+        border-radius: 10px; /* Reduces the border radius for smaller screens */
     }
 
     .caption {
-        font-size: 1em;
-        padding: 10px;
+        font-size: 1em; /* Reduces the font size of the caption for smaller screens */
+        padding: 10px; /* Reduces the padding inside the caption for smaller screens */
     }
 
     .prev, .next {
-        width: 40px;
+        width: 40px; /* Reduces the button size for smaller screens */
         height: 40px;
-        font-size: 1.2em;
+        font-size: 1.2em; /* Reduces the font size for smaller screens */
     }
 
     .prev {
-        left: 10px;
+        left: 10px; /* Adjusts the position for smaller screens */
     }
 
     .next {
-        right: 10px;
+        right: 10px; /* Adjusts the position for smaller screens */
     }
 
     .indicator {
         width: 10px;
         height: 10px;
-        margin: 0 4px;
+        margin: 0 4px; /* Adjusts spacing between indicators for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.8em;
+        font-size: 1.8em; /* Further reduces the font size for very small screens */
     }
 
     .carousel {
-        border-radius: 0;
+        border-radius: 0; /* Removes the border radius for very small screens */
     }
 
     .caption {
-        font-size: 0.9em;
-        padding: 8px;
+        font-size: 0.9em; /* Further reduces the caption font size for very small screens */
+        padding: 8px; /* Further reduces the padding inside the caption for very small screens */
     }
 
     .prev, .next {
-        width: 30px;
+        width: 30px; /* Further reduces the button size for very small screens */
         height: 30px;
-        font-size: 1em;
+        font-size: 1em; /* Further reduces the font size for very small screens */
     }
 }

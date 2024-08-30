@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character encoding and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the web page -->
     <title>Iain Burden Food</title>
+    
+    <!-- Link to Google Fonts for custom typography -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Link to the external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header section containing the page title -->
     <header>
         <h1>Iain Burden Food</h1>
     </header>
 
+    <!-- Main content area with an ID for styling and section for semantic purposes -->
     <div id="gallery" class="section">
+        <!-- Carousel container that holds the slides and navigation buttons -->
         <div class="carousel">
+            <!-- Individual carousel item - each representing a slide in the carousel -->
             <div class="carousel-item active">
+                <!-- Container for the image with a loading spinner -->
                 <div class="image-container">
                     <img data-src="images/dish1.jpg" alt="Pheasant and Bacon Casserole" class="lazy-image">
-                    <div class="loading-spinner"></div>
+                    <div class="loading-spinner"></div> <!-- Spinner shown while image loads -->
                 </div>
+                <!-- Caption describing the image -->
                 <div class="caption">Pheasant and Bacon Casserole</div>
             </div>
+
+            <!-- Additional carousel items for other slides -->
             <div class="carousel-item">
                 <div class="image-container">
                     <img data-src="images/dish2.jpg" alt="Pan-Fried Hake with Mash Potatoes, Roast Asparagus, and Wild Garlic Pesto" class="lazy-image">
@@ -28,6 +43,8 @@
                 </div>
                 <div class="caption">Pan-Fried Hake with Mash Potatoes, Roast Asparagus, and Wild Garlic Pesto</div>
             </div>
+
+            <!-- Repeating structure for other dishes -->
             <div class="carousel-item">
                 <div class="image-container">
                     <img data-src="images/dish3.jpg" alt="Slow Roasted Beef" class="lazy-image">
@@ -35,6 +52,7 @@
                 </div>
                 <div class="caption">Slow Roasted Beef</div>
             </div>
+
             <div class="carousel-item">
                 <div class="image-container">
                     <img data-src="images/dish4.jpg" alt="Lemon Possets" class="lazy-image">
@@ -42,6 +60,8 @@
                 </div>
                 <div class="caption">Lemon Possets</div>
             </div>
+
+            <!-- More carousel items, each representing a different dish -->
             <div class="carousel-item">
                 <div class="image-container">
                     <img data-src="images/dish5.jpg" alt="Baked Camembert with Garlic and Rosemary Tips" class="lazy-image">
@@ -49,6 +69,7 @@
                 </div>
                 <div class="caption">Baked Camembert with Garlic and Rosemary Tips</div>
             </div>
+
             <div class="carousel-item">
                 <div class="image-container">
                     <img data-src="images/dish6.jpg" alt="Chocolate Sponge" class="lazy-image">
@@ -56,6 +77,7 @@
                 </div>
                 <div class="caption">Chocolate Sponge</div>
             </div>
+
             <div class="carousel-item">
                 <div class="image-container">
                     <img data-src="images/dish7.jpg" alt="Globe Artichoke with a Lemon Butter Sauce" class="lazy-image">
@@ -63,6 +85,7 @@
                 </div>
                 <div class="caption">Globe Artichoke with a Lemon Butter Sauce</div>
             </div>
+
             <div class="carousel-item">
                 <div class="image-container">
                     <img data-src="images/dish8.jpg" alt="Sirloin Steak" class="lazy-image">
@@ -70,6 +93,7 @@
                 </div>
                 <div class="caption">Sirloin Steak</div>
             </div>
+
             <div class="carousel-item">
                 <div class="image-container">
                     <img data-src="images/dish9.jpg" alt="Raspberry Tart with a Pistachio Crust" class="lazy-image">
@@ -77,6 +101,7 @@
                 </div>
                 <div class="caption">Raspberry Tart with a Pistachio Crust</div>
             </div>
+
             <div class="carousel-item">
                 <div class="image-container">
                     <img data-src="images/dish10.jpg" alt="Lancashire Hotpot" class="lazy-image">
@@ -84,6 +109,7 @@
                 </div>
                 <div class="caption">Lancashire Hotpot</div>
             </div>
+
             <div class="carousel-item">
                 <div class="image-container">
                     <img data-src="images/dish11.jpg" alt="Onion Soup with Cheesey Crutons and Pickled Shallots" class="lazy-image">
@@ -92,9 +118,11 @@
                 <div class="caption">Onion Soup with Cheesey Crutons and Pickled Shallots</div>
             </div>
 
-            <button class="prev" onclick="moveCarousel(-1)">❮</button>
-            <button class="next" onclick="moveCarousel(1)">❯</button>
+            <!-- Navigation buttons for the carousel -->
+            <button class="prev" onclick="moveCarousel(-1)">❮</button> <!-- Button to move to the previous slide -->
+            <button class="next" onclick="moveCarousel(1)">❯</button> <!-- Button to move to the next slide -->
 
+            <!-- Indicators for the carousel, showing the current slide position -->
             <div class="carousel-indicators">
                 <span class="indicator active" onclick="setCurrentSlide(0)"></span>
                 <span class="indicator" onclick="setCurrentSlide(1)"></span>
@@ -111,11 +139,13 @@
         </div>
     </div>
 
+    <!-- Footer section with contact information -->
     <footer>
         <p>© 2024 Iain Burden. All rights reserved.</p>
-        <p>Contact: <a href="mailto:iain@example.com">iain@example.com</a></p>
+        <p>Contact: <a href="mailto:iain@example.com">iain@example.com</a></p> <!-- Contact email link -->
     </footer>
 
+    <!-- Link to the external JavaScript file for functionality -->
     <script src="script.js"></script>
 </body>
 </html>
