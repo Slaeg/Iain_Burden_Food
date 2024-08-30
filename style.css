@@ -59,7 +59,7 @@ header h1 {
     width: 100%;
     padding-top: 75%; /* 4:3 Aspect Ratio */
     position: relative;
-    margin-bottom: 40px; /* Add space for the caption */
+    margin-bottom: 10px; /* Add space for the caption */
 }
 
 .lazy-image {
